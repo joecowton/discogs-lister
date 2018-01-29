@@ -9,7 +9,7 @@ class ReleaseList extends Component {
 
   renderData(data) {
     return(
-      <div className="card card-block">
+      <div className="card card-block" key={data.title}>
         <h4 className="card title">{data.title}</h4>
         <p className="card-text">Label</p>
         <a className="btn btn-primary">View</a>
@@ -19,7 +19,7 @@ class ReleaseList extends Component {
 
   render () {
     return(
-      <div>
+      <div className="release-list">
         {this.props.data.map(this.renderData)}
       </div>
     )

@@ -1,31 +1,17 @@
-import {  FETCH_DATA} from './types';
-
-// export function fetchData() {
-//   return {
-//     type: FETCH_DATA,
-
-//   }
-// }
-
 import axios from 'axios';
+import { FETCH_DATA } from './types';
+import Keys from '../../config/keys'
 
-const API_KEY = 'dae1bb1309c6b5fb8afbd8970332deb2'
-const ROOT_URL = `http://api.openweathermap.org/data/2.5/forecast?appid=${API_KEY}`
-
-export const FETCH_WEATHER = 'FETCH_WEATHER';
+const myKey = Keys.discogsKey;
+const mySecret = Keys.discogsSecret;
+const ROOT_URL = 'https://api.discogs.com/artists/748051/releases'
 
 export function fetchData() {
-  const url = `${ROOT_URL}&q=${'new york'},us`;
-  const request = axios.get(url)
-
-  console.log('Request', request);
+  const request =
+  axios.get(`${ROOT_URL}?key=${myKey}&secret=${mySecret}`)
 
   return {
     type: FETCH_DATA,
-    payload: [
-      { title: 'this' },
-      { title: 'that' },
-      { title: 'other' }
-    ]
+    payload: request
   }
 }

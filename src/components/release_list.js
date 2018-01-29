@@ -11,8 +11,9 @@ class ReleaseList extends Component {
     return(
       <div className="card card-block" key={data.title}>
         <h4 className="card title">{data.title}</h4>
-        <p className="card-text">Label</p>
-        <a className="btn btn-primary">View</a>
+        <p className="card-text">{data.label}</p>
+        <img className="img img-tumbnail" src={data.thumb}></img>
+        {/* <a className="btn btn-primary" href={data.resource_url}>View</a> */}
       </div>
     )
   }
@@ -27,7 +28,6 @@ class ReleaseList extends Component {
 }
 
 function mapStateToProps(state) {
-  console.log(state.data);
   return { data: state.data }
 }
 

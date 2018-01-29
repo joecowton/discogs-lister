@@ -9,11 +9,12 @@ class ReleaseList extends Component {
 
   renderData(data) {
     return(
-      <div className="card card-block" key={data.title}>
-        <h4 className="card title">{data.title}</h4>
-        <p className="card-text">{data.label}</p>
-        <img className="img img-tumbnail" src={data.thumb}></img>
-        {/* <a className="btn btn-primary" href={data.resource_url}>View</a> */}
+      <div className="a">
+        <li
+          key={data.title}
+          className="list-group-item">
+          <img className="img img-tumbnail img-circle" src={data.thumb}></img>
+        </li>
       </div>
     )
   }

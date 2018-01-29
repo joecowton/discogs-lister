@@ -1,4 +1,6 @@
-# Discogs Lister
+# Discogs Reducer
 
-Work in progress, readme coming soon!
+React-Redux app to display just one artists repetoire. Will be expanded to include Soundcloud, Youtube etc
+
+Work in progress, readme coming soon.
 

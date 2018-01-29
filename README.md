@@ -4,3 +4,5 @@ React-Redux app to display just one artists repetoire. Will be expanded to inclu
 
 Work in progress, readme coming soon.
 
+![App](images/2.png)
+

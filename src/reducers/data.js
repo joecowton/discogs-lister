@@ -7,5 +7,6 @@ export default function(state = [], action) {
     case FETCH_DATA:
       return [...state, ...action.payload.data.releases ];
   }
+  console.log(action.payload);
   return state;
 }

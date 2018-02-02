@@ -4,9 +4,8 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-
-import ReleaseList from './components/release_list'
 import ReleaseDetail from './components/release_detail'
+import ReleaseList from './components/release_list'
 import reducers from './reducers';
 import Async from './middlewares/async'
 

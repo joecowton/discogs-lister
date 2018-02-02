@@ -13,3 +13,7 @@
   height: 100px;
   width: 100px;
 }
+
+.container {
+  display: inline-grid;
+}

@@ -9,26 +9,25 @@ class ReleaseList extends Component {
   }
 
   handleClick() {
-
   }
 
   renderData(data) {
     return(
       <div className="a">
-        <li
-          key={data.id}
-          className="list-group-item">
-          <img
-            className="img img-tumbnail img-circle"
-            onClick={()=> {console.log(data.id)}}
-            src={data.thumb}>
-          </img>
+        <li key={data.id} className="list-group-item">
+          <Link to={`/release/${data.id}`}>
+            <img className="img img-tumbnail img-circle" src={data.thumb}></img>
+          </Link>
         </li>
       </div>
     )
   }
 
   render () {
+    if (!this.props.data){
+      return <div>Loading..</div>
+    }
+
     return(
       <div className="release-list">
         {this.props.data.map(this.renderData)}

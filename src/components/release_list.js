@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import * as actions from '../actions';
 
 class ReleaseList extends Component {
@@ -7,13 +8,21 @@ class ReleaseList extends Component {
     this.props.fetchData();
   }
 
+  handleClick() {
+
+  }
+
   renderData(data) {
     return(
       <div className="a">
         <li
-          key={data.title}
+          key={data.id}
           className="list-group-item">
-          <img className="img img-tumbnail img-circle" src={data.thumb}></img>
+          <img
+            className="img img-tumbnail img-circle"
+            onClick={()=> {console.log(data.id)}}
+            src={data.thumb}>
+          </img>
         </li>
       </div>
     )

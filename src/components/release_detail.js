@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { fetchData } from '../actions';
+import { fetchRelease } from '../actions';
 
 import { connect } from 'react-redux';
 
 class ReleaseDetail extends Component {
   componentDidMount() {
-    this.props.fetchData();
+    this.props.fetchRelease(81934);
   }
 
   render() {
@@ -37,4 +37,4 @@ function mapStateToProps({ data }, ownProps) {
 }
 
 
-export default connect(mapStateToProps, {fetchData} )(ReleaseDetail);
+export default connect(mapStateToProps, { fetchRelease } )(ReleaseDetail);
